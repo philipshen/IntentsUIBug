@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    let intent = ExampleIntent()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "h:mm"
+    intent.title = dateFormatter.string(from: Date())
+    intent.subtitle = "Here's an example intent"
+    let interaction = INInteraction(intent: intent, response: nil)
+    interaction.donate { error in
+        if let error = error {
+            fatalError(error.localizedDescription)
+        } else {
+            print("Successfully donated interaction")
+        }
+    }
+    
     return true
   }
 
