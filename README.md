@@ -2,7 +2,7 @@
 
 This sample project is used to highlight an issue with Intents UI where 'failure' responses do not cause the IntentsUI to be displayed. This bug appears on both real devices and the simulator.
 
-I'm not sure if this is the expected behavior or not; however I have seen projects that don't have this issue, leading me to believe that (1) it's not a bug and (2) there's something extra that needs to be done in order to support this functionality. What that is, I have been unable (and believe me, I've tried) to find it online.
+I'm not sure if this is the expected behavior or not; however I have seen projects that don't have this issue, leading me to believe that (1) it's not a bug and (2) there's something extra that needs to be done in order to support this functionality. What that is, I have been unable (and believe me, I've tried) to find online.
 
 ## Steps to Reproduce
 
